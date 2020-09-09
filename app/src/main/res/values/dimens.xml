@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="three_grid_unit">18dp</dimen>
+    <dimen name="one_and_a_half_grid_unit">9dp</dimen>
+    <dimen name="ms__padding_left">10dp</dimen>
+    <dimen name="ms__padding_top">5dp</dimen>
+    <dimen name="ms__item_height">20dp</dimen>
+    <dimen name="ms__popup_padding_left">10dp</dimen>
+    <dimen name="ms__popup_padding_top">5dp</dimen>
+    <dimen name="ms_title_text_size">12sp</dimen>
+
+    <dimen name="setttings_content_size">16sp</dimen>
+    <dimen name="setttings_liveness_content_title_size">17sp</dimen>
+    <dimen name="setttings_liveness_title_save_size">17sp</dimen>
+</resources>

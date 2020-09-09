@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fontsize">
+        <item>15</item>
+        <item>16 </item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21 </item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26 </item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="fontcolor">
+        <item>#FFFFFF</item>
+        <item>#4CAF50</item>
+        <item>#E91E63</item>
+        <item>#2196F3</item>
+        <item>#FFEB3B</item>
+        <item>#000000</item>
+
+    </string-array>
+</resources>

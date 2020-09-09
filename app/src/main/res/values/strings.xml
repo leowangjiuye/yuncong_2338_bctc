@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">活体检测Demo</string>
+    <string name="string_detection_set_title">活体参数设置</string>
+    <string name="string_detection_check_set_title">活体检测参数设置</string>
+    <string name="string_other_function_set_title">其他参数设置</string>
+    <string name="string_camera_set_title">相机参数设置</string>
+    <string name="string_set_title">设置</string>
+    <string name="string_config_file_set_title">文件配置设置</string>
+    <string name="string_render_set_title">预览参数设置</string>
+    <string name="string_scan_set_title">扫码参数设置</string>
+
+    <string name="empty_directory_hint">无可选文件</string>
+    <string name="action_close">关</string>
+    <string name="type_archive">压缩包</string>
+    <string name="type_certificate">证书</string>
+    <string name="type_directory">目录</string>
+    <string name="type_document">文件</string>
+    <string name="type_drawing">图片</string>
+    <string name="type_excel">EXCEL</string>
+    <string name="type_image">照片</string>
+    <string name="type_music">音乐</string>
+    <string name="type_pdf">PDF</string>
+    <string name="type_power_point">PPT</string>
+    <string name="type_word">WORD</string>
+    <string name="type_apk">APK</string>
+    <string name="type_video">Video</string>
+
+    <string name="string_settings_save">保存</string>
+    <string name="string_settings_select_file_path">选择文件路径</string>
+
+    <string-array name="array_camMode">
+        <item>PID - VID</item>
+    </string-array>
+
+    <string-array name="array_camParam">
+        <item>关闭</item>
+        <item>自动</item>
+        <item>手动</item>
+    </string-array>
+    <string-array name="array_camera_params">
+        <item>亮度</item>
+        <item>对比度</item>
+        <item>色调</item>
+        <item>饱和度</item>
+        <item>锐度</item>
+        <item>伽玛值</item>
+        <item>白平衡</item>
+        <item>颜色</item>
+        <item>逆光值</item>
+        <item>增益</item>
+        <item>倾斜</item>
+        <item>滚动</item>
+        <item>缩放</item>
+        <item>曝光值</item>
+        <item>光圈值</item>
+        <item>焦点值</item>
+
+    </string-array>
+
+</resources>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.launch.MainActivity">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="#F44336"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="活体检测"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--<SurfaceView-->
+            <!--android:id="@+id/camera_view1"-->
+            <!--android:layout_width="640px"-->
+            <!--android:layout_height="480px"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_gravity="center" />-->
+            <!--<SurfaceView-->
+            <!--android:id="@+id/camera_view2"-->
+            <!--android:layout_width="640px"-->
+            <!--android:layout_height="480px"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_gravity="center" />-->
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/ae_result_tv"
+                android:layout_marginTop="60dp"
+                android:layout_width="100dp"
+                android:layout_height="160dp"
+                android:background="@color/blue"></TextView>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/ae_result_tv1"
+                android:layout_below="@id/ae_result_tv"
+                android:layout_marginTop="10dp"
+                android:layout_width="100dp"
+                android:layout_height="160dp"
+                android:background="@color/blue"></TextView>
+            <TextView
+                android:id="@+id/tv_camera_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="相机类型:"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/sp_model_camera_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/tv_camera_menu" />
+
+            <ImageView
+                android:id="@+id/iv_setttings"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/img_settings" />
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/img_logo_bg" />
+
+            <TextView
+                android:id="@+id/tv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="活体检测功能演示"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/fl_surface"
+                android:layout_width="240dp"
+                android:layout_height="320dp"
+                android:layout_below="@id/tv_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <com.cloudwalk.gldisplay.GLFrameSurface
+                    android:id="@+id/sr_vis_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+                <com.cloudwalk.gldisplay.GLFrameSurface
+                    android:id="@+id/sr_nis_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <cn.cloudwalk.midware.engine.view.CWRectView
+                    android:id="@+id/rectview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/iv_face_mask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/iv_camera_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black" />
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/ms__drawable_test"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"/>
+                <TextView
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:layout_gravity="bottom"
+                    android:id="@+id/tv_scan_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_liveness_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fl_surface"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="40dp"
+                android:paddingTop="5dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="5dp"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_1vn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_liveness_result">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/ll_register_feature"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_last_live"
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="当前图片"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_register_feature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/blue"
+                        android:text="获取当前人脸" />
+
+                    <Button
+                        android:id="@+id/btn_register_face"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/blue"
+                        android:text="注册当前照片" />
+
+                    <Button
+                        android:id="@+id/btn_compare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/blue"
+                        android:text="人脸比对" />
+
+                    <Button
+                        android:id="@+id/btn_image_compare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/blue"
+                        android:text="图片比对" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/ll_register_feature"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="160dp">
+
+                        <ImageView
+                            android:id="@+id/iv_compare_result"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:background="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/tv_score"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:paddingLeft="1dp"
+                            android:paddingRight="1dp"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="13sp"
+                            tools:text="分值:0.888888888" />
+
+                        <TextView
+                            android:id="@+id/tv_feature_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/tv_score"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:textColor="@android:color/holo_red_light"
+                            android:textSize="11sp"
+                            tools:text="名称:张三" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="比对结果"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/btn_start_preview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@color/blue"
+                        android:text="打开摄像头" />
+
+                    <Button
+                        android:id="@+id/btn_stop_preview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/blue"
+                        android:text="关闭摄像头" />
+
+                    <Button
+                        android:id="@+id/btn_start_liveness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/blue"
+                        android:text="开启活体" />
+
+                    <Button
+                        android:id="@+id/btn_set_paramter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/blue"
+                        android:text="设置参数"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <com.cloudwalk.livenesscameraproject.view.antishake.AntiShakeButton
+                        android:id="@+id/btn_capture_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="@color/blue"
+                        android:text="拍摄当前照片" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--   解决初始化未成功时touch事件引起的ANR问题-->
+    <View
+        android:id="@+id/transparentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+
+
+</RelativeLayout>
+

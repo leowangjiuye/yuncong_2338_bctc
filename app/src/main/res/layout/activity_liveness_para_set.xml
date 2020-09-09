@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/theme"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_liveness_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/string_detection_set_title"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_liveness_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/string_settings_save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/setttings_liveness_title_save_size" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/gray">
+
+                <LinearLayout
+                    android:id="@+id/ll_roi_x_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ROI_X"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_roi_x"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_roi_y_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ROI_Y"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_roi_y"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ROI_Width"
+                        android:textColor="@color/settings_left_label_font"
+
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_roi_width"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="ROI_Height"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_roi_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="使用自适应人脸尺寸"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <com.cloudwalk.livenesscameraproject.view.SlideButton
+                        android:id="@+id/sbtn_default_face"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="最小人脸"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_min_face"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="最大人脸"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_max_face"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="最大人脸个数"
+                        android:textColor="@color/settings_left_label_font"
+
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_max_face_mount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="检测性能水平"
+                        android:textColor="@color/settings_left_label_font"
+
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_detect_performance_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="进行可见光和红外光人脸比对"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <com.cloudwalk.livenesscameraproject.view.SlideButton
+                        android:id="@+id/sbtn_is_compare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="开启活体"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <com.cloudwalk.livenesscameraproject.view.SlideButton
+                        android:id="@+id/sbtn_is_open_liveness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="进行质量检测"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <com.cloudwalk.livenesscameraproject.view.SlideButton
+                        android:id="@+id/sbtn_is_open_quality_detect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="pitch_max"
+                        android:textColor="@color/settings_left_label_font"
+
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_pitch_max"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="pitch_min"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_pitch_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="yaw_max"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_yaw_max"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="yaw_min"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_yaw_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="roll_max"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_roll_max"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="roll_min"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_roll_min"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="清晰度阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_clarity_threshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="肤色阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_skin_threshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="人脸置信度阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_confidence"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="睁眼阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_open_eye_threshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="张嘴阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_open_mouth_threshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="遮挡阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_occlusion_threshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="太亮阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_brightness_threshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="太暗阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_darkness_threshold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="黑框眼镜阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_blackspec"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="墨镜阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_sunglass"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="口罩阈值"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_proceduremask"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="开启美颜"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <com.cloudwalk.livenesscameraproject.view.SlideButton
+                        android:id="@+id/sbtn_is_open_face_beauty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="美颜功能"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size"
+                        android:minHeight="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"/>
+
+                    <Spinner
+                        android:id="@+id/sp_beauty_op"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|right"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="瘦脸(0-2,默认1)"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_face_lift"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="磨皮(0-2,默认1)"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_smooth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="美白(0-2,默认1)"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+
+                    <EditText
+                        android:id="@+id/et_whiten"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请输入"
+                        android:textColor="@color/settings_left_label_font"
+                        android:textSize="@dimen/setttings_content_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
